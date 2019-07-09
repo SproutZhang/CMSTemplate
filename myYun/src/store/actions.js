@@ -2,12 +2,6 @@ import * as types from './actionTypes';
 import {post,get} from '../api/index';
 
 
-//登录
-export function log(){
-    return{
-        type: types.LOGIN
-    }
-}
 
 export function getUser(data){
     return{
@@ -23,9 +17,11 @@ export function login(url,params){
     return function(dispatch,getState){
         post(url,params).then(d=>{
             if(d.code === 0){
-                document.cookie="islog=true";
-                dispatch(log())
-                window.location.href="/"
+                document.cookie="username="+d.data.name;
+                dispatch({
+                    type: types.LOGIN,
+                    data: d.data
+                })
             }else{
                 alert(d.msg)
                 return false

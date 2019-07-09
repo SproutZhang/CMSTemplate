@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Table, Divider, Tag } from 'antd';
 import { connect } from 'react-redux';
-import * as actions from '../../../store/actions'
+import * as actions from '../../../store/actions';
+import { mapUser } from '../../../store/setMapStateProps'
 
 
 class User extends Component {
@@ -39,5 +40,5 @@ class User extends Component {
     }
 }
  
-export default connect(state=>state,actions)(User);
+export default connect(mapUser,actions)(User);
 

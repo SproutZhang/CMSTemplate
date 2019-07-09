@@ -5,8 +5,11 @@ const app = express();
 let sql = {
      users: [
          {
+             id: 0,
              name: 'admin',
-             psw: '123456'
+             psw: '123',
+             age: 12,
+             avatar: 'http://localhost/cat.png'
          }
      ],
      usersInfo:{
@@ -65,18 +68,22 @@ let sql = {
      }
   
 }
+app.use(express.static('./img'))
 app.use(bodyParser.urlencoded({ extended: false }));
 //登录post
 app.post('/login',(req,res) =>{
     let obj = req.body;
-    console.log(obj);
     if(!(obj.user&&obj.psw)){
         res.json({code:1,msg:'请填写正确的用户名密码'});
         return false;
     }
     let o = sql.users.find(item=>item.name === obj.user);
     if(o){
-        o.psw===obj.psw?res.json({code:0,msg:'登录成功'}):res.json({code:1,msg:'用户名或密码错误'})
+        let userinfo = {
+            name: 'admin',
+            avatar: 'http://localhost/cat.png'
+        }
+        o.psw===obj.psw?res.json({code:0,msg:'登录成功',data:userinfo}):res.json({code:1,msg:'用户名或密码错误'})
     }else{
         res.json({code:1,msg:'暂无此用户'})
     }
