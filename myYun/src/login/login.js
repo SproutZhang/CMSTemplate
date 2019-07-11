@@ -3,7 +3,8 @@ import './login.css';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import * as actions from '../store/actions';
 import { connect } from 'react-redux';
-import { mapUser } from '../store/setMapStateProps'
+import { mapUser } from '../store/setMapStateProps';
+import Logo from '../assets/images/logo.svg';
 
 class Login extends Component {
 
@@ -34,6 +35,10 @@ class Login extends Component {
         return ( 
             <div className="login">
                 <div className="mengban">
+                    <div className="logo-box">
+                        <img src={ Logo } alt=""/>
+                        <h2>云商城后台管理系统</h2>
+                    </div>
                     <div className="formBox">
                         <Form onSubmit={this.handleSubmit} className="login-form">
                             <Form.Item>
@@ -65,7 +70,6 @@ class Login extends Component {
                                 <Button type="primary" htmlType="submit" className="login-form-button">
                                     登录
                                 </Button>
-                                或者 <a href="">去注册</a>
                             </Form.Item>
                         </Form>
                     </div>    

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Layout, Menu, Icon, } from 'antd';
+import Logo from '../../assets/images/logo.svg'
+import './sider.css'
 const { Sider} = Layout;
 const { SubMenu } = Menu;
 
@@ -15,7 +17,10 @@ class Siders extends Component {
     render() { 
         return ( 
             <Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>
-          <div className="logo" />
+                <div className="logo">
+                    <img src={Logo} alt=""/>
+                    <span>云商城</span>
+                </div>
           <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
             <Menu.Item key="1">
               <Icon type="desktop" />

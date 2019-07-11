@@ -12,5 +12,24 @@
 .formBox{
     width: 300px;
     height: 500px;
-    margin: 200px auto;
+    margin: 0 auto;
+}
+.logo-box{
+    width: 500px;
+    height: 100px;
+    margin: 100px auto 50px;
+}
+.logo-box img{
+    display: inline-block;
+    height: 90px;
+    vertical-align: bottom;
+}
+.logo-box h2{
+    display: inline-block;
+    font-size: 35px;
+    color: #fff;
+    font-weight: 400;
+}
+.login-form-button{
+    margin-left: 40%;
 }

@@ -1,0 +1,11 @@
+.logo{
+    padding: 8px;
+}
+.logo img{
+    width: 50px;
+    vertical-align: bottom;
+}
+.logo span{
+    color: #fff;
+    font-size: 22px;
+}

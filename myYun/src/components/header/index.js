@@ -20,7 +20,7 @@ class Headers extends Component {
         let menu = (
             <Menu>
               <Menu.Item>
-                <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/">
+                <a target="_blank" rel="noopener noreferrer">
                   退出
                 </a>
               </Menu.Item>
