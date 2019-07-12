@@ -1,11 +1,13 @@
 import * as types from '../actionTypes';
+import Cookies from 'js-cookie'
 
-let name = document.cookie.split('=')[1]
+let name = Cookies.get("username")
+let avatar = Cookies.get("avatar")
 
 let initState={
     user:{
         name: name,
-        avatar:'',
+        avatar:avatar,
     },
     isLogin: name?true:false,
     userData:{}

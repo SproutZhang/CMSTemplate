@@ -17,6 +17,7 @@ class Login extends Component {
         });
     };
     componentDidMount(){
+        this.props.getCookie('/get')
         let { isLogin, history } = this.props;
         console.log(this.props);
         if(isLogin){

@@ -17,10 +17,27 @@ export function login(url,params){
     return function(dispatch,getState){
         post(url,params).then(d=>{
             if(d.code === 0){
-                document.cookie="username="+d.data.name;
+                // document.cookie="username="+d.data.name;
                 dispatch({
                     type: types.LOGIN,
                     data: d.data
+                })
+            }else{
+                alert(d.msg)
+                return false
+            }
+        })
+    }
+}
+
+//获取cookie
+export function getCookie(url) {
+    return function (dispatch,getState) {
+        get(url).then(d=>{
+            if(d.code === 0){
+                dispatch({
+                    type: types.LOGIN,
+                    data: d
                 })
             }else{
                 alert(d.msg)
