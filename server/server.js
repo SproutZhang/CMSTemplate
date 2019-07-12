@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser')
 const app = express();
+const cookieParser = require('cookie-parser')
 
 let sql = {
      users: [
@@ -68,26 +69,72 @@ let sql = {
      }
   
 }
+
 app.use(express.static('./img'))
 app.use(bodyParser.urlencoded({ extended: false }));
-//登录post
+app.use(cookieParser());
+
+/*
+* 用户操作
+*
+*
+* */
+
+//登录
 app.post('/login',(req,res) =>{
-    let obj = req.body;
-    if(!(obj.user&&obj.psw)){
-        res.json({code:1,msg:'请填写正确的用户名密码'});
-        return false;
+    let obj = {};
+    let {user,psw} = req.body;
+
+    if(!(user&&psw)){
+        obj.code = 1;
+        obj.msg = "请填写正确的用户名密码"
     }
-    let o = sql.users.find(item=>item.name === obj.user);
+    let o = sql.users.find(item=>item.name === user);
     if(o){
         let userinfo = {
-            name: 'admin',
-            avatar: 'http://localhost/cat.png'
+            name: o.name,
+            avatar: o.avatar
         }
-        o.psw===obj.psw?res.json({code:0,msg:'登录成功',data:userinfo}):res.json({code:1,msg:'用户名或密码错误'})
+        if(o.psw == psw){
+            obj.code = 0;
+            obj.msg = "登陆成功";
+            obj.data = userinfo;
+        }else{
+            obj.code = 1;
+            obj.msg = "用户名或密码错误";
+        }
+
     }else{
-        res.json({code:1,msg:'暂无此用户'})
+        obj.code = 1;
+        obj.msg = "用户不存在";
     }
+
+    if(obj.code === 0){
+        //给浏览器设置cookie
+        res.cookie('username',obj.data.name,{maxAge: 360000})
+        res.cookie('avatar',obj.data.avatar,{maxAge: 360000})
+    }
+    res.json(obj)
     
+})
+
+//获取cookie
+app.use('/get',(req,res)=>{
+    let cookie = req.cookies.username;
+    let obj = {};
+    if(!cookie){
+        res.json({code:2,msg:'未登录'})
+    }else{
+        obj.code = 0;
+        obj.msg = "登陆成功";
+        let us = sql.users.find(item=> item.name === cookie);
+        let userinfo = {
+            name: us.name,
+            avatar: us.avatar
+        }
+        obj.data = userinfo;
+        res.json(obj)
+    }
 })
 
 //获取用户信息
