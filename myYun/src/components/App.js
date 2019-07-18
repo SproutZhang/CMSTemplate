@@ -3,7 +3,8 @@ import { Layout } from 'antd';
 import './App.css';
 import Siders from './sider/index';
 import Headers from './header/index';
-import Contents from './content/index';
+import menuRouter from './menuRouter/menuRouter';
+
 
 
 class App extends React.Component {
@@ -13,8 +14,10 @@ class App extends React.Component {
         <Layout style={{ minHeight: '100vh' }}>
           <Siders />
           <Layout>
-            <Headers />
-            <Contents />
+              <Headers />
+              <>
+                  { menuRouter }
+              </>
           </Layout>
         </Layout>
 

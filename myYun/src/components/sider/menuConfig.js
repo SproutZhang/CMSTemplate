@@ -3,8 +3,8 @@ const Menus = [
     {
         key: 1,
         icon:'pie-chart',
-        menuName: '商品统计',
-        path:'/charts'
+        menuName: '主页',
+        path: '/charts'
     },
     {
         key: 2,

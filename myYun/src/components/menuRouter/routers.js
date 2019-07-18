@@ -1,11 +1,11 @@
-import Charts from '../charts/index';
-import User from '../users/index';
-import Goods from '../goods/index';
-import First from '../goodsCategory/first';
-import Second from '../goodsCategory/second';
-import Query from '../order/query';
-import Dispatch from '../order/dispatch';
-import Refund from '../order/refund';
+import Charts from '../content/charts/index';
+import User from '../content/users/index';
+import Goods from '../content/goods/index';
+import First from '../content/goodsCategory/first';
+import Second from '../content/goodsCategory/second';
+import Query from '../content/order/query';
+import Dispatch from '../content/order/dispatch';
+import Refund from '../content/order/refund';
 
 
 const MenuRouters = [
