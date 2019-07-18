@@ -17,7 +17,6 @@ class User extends Component {
     render() { 
         
         let {userData} = this.props;
-        console.log(this.props);
         let columns1 = userData.columns;
         if(columns1){
             columns1.push({

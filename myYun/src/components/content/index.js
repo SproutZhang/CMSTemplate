@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Layout, Breadcrumb} from 'antd';
-import User from './contents/users'
+import menuRouter from './menuRouter/menuRouter';
 const { Content } = Layout;
 
 class Contents extends Component {
@@ -21,7 +21,9 @@ class Contents extends Component {
                 <Breadcrumb.Item>Bill</Breadcrumb.Item>
                 </Breadcrumb>
             <div style={{ padding: 24, background: '#fff', minHeight: 360 , height: '100vh'}}>
-                <User />
+                <>
+                    { menuRouter }
+                </>
             </div>
           </Content>
          );

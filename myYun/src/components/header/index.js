@@ -28,7 +28,6 @@ class Headers extends Component {
             </Menu>
           );
         let { user } = this.props;
-        console.log(this.props);
         return ( 
             <Header style={{ background: '#fff', padding: 0, position: "relative" }}>
                 <Icon
