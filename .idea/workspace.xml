@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce00ad61-3d89-4c9d-87b7-cddab5f43c74" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/myYun/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/myYun/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myYun/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/myYun/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myYun/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/myYun/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myYun/src/components/content/charts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/myYun/src/components/content/charts/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myYun/src/components/content/goods/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/myYun/src/components/content/goods/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myYun/src/components/content/goodsCategory/first.js" beforeDir="false" afterPath="$PROJECT_DIR$/myYun/src/components/content/goodsCategory/first.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myYun/src/components/content/goodsCategory/second.js" beforeDir="false" afterPath="$PROJECT_DIR$/myYun/src/components/content/goodsCategory/second.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myYun/src/components/content/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/myYun/src/components/content/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myYun/src/components/content/menuRouter/menuRouter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myYun/src/components/content/menuRouter/routers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myYun/src/components/content/order/dispatch.js" beforeDir="false" afterPath="$PROJECT_DIR$/myYun/src/components/content/order/dispatch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myYun/src/components/content/order/query.js" beforeDir="false" afterPath="$PROJECT_DIR$/myYun/src/components/content/order/query.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myYun/src/components/content/order/refund.js" beforeDir="false" afterPath="$PROJECT_DIR$/myYun/src/components/content/order/refund.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myYun/src/components/content/users/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/myYun/src/components/content/users/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myYun/src/components/sider/menuConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/myYun/src/components/sider/menuConfig.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,6 +18,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myYun/src/router/router_config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myYun/src/components/content/index.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -48,24 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myYun/src/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="42" column="40" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-                <element signature="e#189#224#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myYun/src/components/content/order/refund.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="25" selection-end-column="22" />
+            <state relative-caret-position="484">
+              <caret line="22" column="40" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="40" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -76,8 +66,68 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myYun/src/components/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+            <state relative-caret-position="352">
+              <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myYun/src/components/content/charts/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="77" column="40" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myYun/src/components/content/charts/orderCharts/order.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="60" column="24" lean-forward="true" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/myYun/src/components/content/goods/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myYun/src/components/content/charts/orderCharts/collect.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="577">
+              <caret line="68" column="28" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myYun/src/components/content/charts/card/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="12" column="21" selection-end-line="36" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -119,7 +169,6 @@
         <option value="$PROJECT_DIR$/myYun/src/store/index.js" />
         <option value="$PROJECT_DIR$/myYun/src/index.js" />
         <option value="$PROJECT_DIR$/myYun/src/router/router_config.js" />
-        <option value="$PROJECT_DIR$/myYun/src/router/index.js" />
         <option value="$PROJECT_DIR$/myYun/src/components/sider/sider.css" />
         <option value="$PROJECT_DIR$/myYun/src/store/actions.js" />
         <option value="$PROJECT_DIR$/myYun/src/store/reducer/reducer_user.js" />
@@ -138,9 +187,7 @@
         <option value="$PROJECT_DIR$/myYun/src/components/content/contents/charts.js" />
         <option value="$PROJECT_DIR$/myYun/src/components/content/menuRouter/menuRouter.js" />
         <option value="$PROJECT_DIR$/myYun/src/components/content/menuRouter/routers.js" />
-        <option value="$PROJECT_DIR$/myYun/src/components/content/charts/index.js" />
         <option value="$PROJECT_DIR$/myYun/src/components/content/index.js" />
-        <option value="$PROJECT_DIR$/myYun/src/components/content/goods/index.js" />
         <option value="$PROJECT_DIR$/myYun/src/components/content/order/query.js" />
         <option value="$PROJECT_DIR$/myYun/src/components/content/order/dispatch.js" />
         <option value="$PROJECT_DIR$/myYun/src/components/content/order/refund.js" />
@@ -150,6 +197,14 @@
         <option value="$PROJECT_DIR$/myYun/src/components/menuRouter/routers.js" />
         <option value="$PROJECT_DIR$/myYun/src/components/App.js" />
         <option value="$PROJECT_DIR$/myYun/src/components/sider/menuConfig.js" />
+        <option value="$PROJECT_DIR$/myYun/src/router/index.js" />
+        <option value="$PROJECT_DIR$/myYun/src/components/content/charts/card/card.css" />
+        <option value="$PROJECT_DIR$/myYun/src/components/content/charts/card/index.js" />
+        <option value="$PROJECT_DIR$/myYun/src/components/content/charts/orderCharts/index.js" />
+        <option value="$PROJECT_DIR$/myYun/src/components/content/charts/orderCharts/order.js" />
+        <option value="$PROJECT_DIR$/myYun/src/components/content/charts/orderCharts/collect.js" />
+        <option value="$PROJECT_DIR$/myYun/src/components/content/charts/index.js" />
+        <option value="$PROJECT_DIR$/myYun/src/components/content/goods/index.js" />
       </list>
     </option>
   </component>
@@ -165,7 +220,8 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="29" />
+    <option name="x" value="96" />
+    <option name="y" value="274" />
     <option name="width" value="1440" />
     <option name="height" value="801" />
   </component>
@@ -200,7 +256,24 @@
               <item name="CMSTemplate" type="462c0819:PsiDirectoryNode" />
               <item name="myYun" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CMSTemplate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CMSTemplate" type="462c0819:PsiDirectoryNode" />
+              <item name="myYun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CMSTemplate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CMSTemplate" type="462c0819:PsiDirectoryNode" />
+              <item name="myYun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="goods" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CMSTemplate" type="b2602c69:ProjectViewProjectNode" />
@@ -235,6 +308,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/myYun/src/components/content/charts/orderCharts" />
       <recent name="$PROJECT_DIR$/myYun/src/components/content/contents" />
       <recent name="$PROJECT_DIR$/myYun/src/store/reducer" />
     </key>
@@ -266,15 +340,16 @@
       <workItem from="1562824039199" duration="6828000" />
       <workItem from="1562895277161" duration="2177000" />
       <workItem from="1563239997169" duration="1705000" />
-      <workItem from="1563423163464" duration="13576000" />
+      <workItem from="1563423163464" duration="21198000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55383000" />
+    <option name="totallyTimeSpent" value="63005000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="29" width="1440" height="801" extended-state="0" />
+    <frame x="96" y="274" width="1440" height="801" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20648344" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -299,18 +374,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/myYun/src/login.js" />
-    <entry file="file://$PROJECT_DIR$/../../yunlife1/src/Routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-56">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myYun/src/assets/images/add_categories.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myYun/src/App.css" />
     <entry file="file://$PROJECT_DIR$/myYun/src/logo.svg" />
     <entry file="file://$PROJECT_DIR$/myYun/src/components/index.js" />
     <entry file="file://$PROJECT_DIR$/myYun/src/App.test.js" />
@@ -568,16 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myYun/src/components/content/charts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myYun/src/components/content/goodsCategory/second.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
@@ -592,16 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="24" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myYun/src/components/content/goods/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -638,16 +681,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myYun/src/components/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myYun/src/components/content/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
@@ -675,13 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myYun/src/router/router_config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myYun/src/components/menuRouter/routers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -689,13 +715,89 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/myYun/src/router/router_config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/myYun/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="42" column="40" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="40" />
+        <state relative-caret-position="484">
+          <caret line="22" column="40" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="40" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#189#224#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myYun/src/components/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myYun/src/components/content/charts/card/card.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myYun/src/components/content/charts/card/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="21" selection-end-line="36" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myYun/src/components/content/charts/orderCharts/collect.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="68" column="28" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myYun/src/components/content/charts/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="77" column="40" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myYun/src/components/content/charts/orderCharts/order.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="60" column="24" lean-forward="true" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myYun/src/components/content/goods/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>

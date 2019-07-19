@@ -1,0 +1,9 @@
+.cardBox h4{
+    color: #7e858d;
+    font-weight: 600;
+}
+.cardBox hr{
+    height: 1px;
+    background-color: #eee;
+    border: none;
+}
