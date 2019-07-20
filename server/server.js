@@ -111,8 +111,8 @@ app.post('/login',(req,res) =>{
 
     if(obj.code === 0){
         //给浏览器设置cookie
-        res.cookie('username',obj.data.name,{maxAge: 360000})
-        res.cookie('avatar',obj.data.avatar,{maxAge: 360000})
+        res.cookie('username',obj.data.name,{maxAge: 3600000})
+        res.cookie('avatar',obj.data.avatar,{maxAge: 3600000})
     }
     res.json(obj)
     
