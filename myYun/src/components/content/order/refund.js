@@ -14,12 +14,16 @@ class Refund extends Component {
 
     render() {
         return (
-            <Content style={{ margin: '0 16px' }}>
-                <Breadcrumb style={{ margin: '16px 0' }}>
-                    <Breadcrumb.Item>主页</Breadcrumb.Item>
-                    <Breadcrumb.Item>退款处理</Breadcrumb.Item>
-                </Breadcrumb>
-                <div style={{ padding: 24, background: '#fff', minHeight: 360 , height: '100vh'}}>
+            <Content>
+                <div className="title-box">
+                    <Breadcrumb>
+                        <Breadcrumb.Item>主页</Breadcrumb.Item>
+                        <Breadcrumb.Item>退款处理</Breadcrumb.Item>
+                    </Breadcrumb>
+                    <h2>退款处理</h2>
+                    <p>管理客户的退货请求，查看待处理的退货请求，可以进行拒绝和接受退货请求操作。</p>
+                </div>
+                <div className="content-box">
                     <div>退款处理</div>
 
                 </div>

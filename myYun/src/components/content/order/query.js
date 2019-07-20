@@ -14,12 +14,16 @@ class Query extends Component {
 
     render() {
         return (
-            <Content style={{ margin: '0 16px' }}>
-                <Breadcrumb style={{ margin: '16px 0' }}>
-                    <Breadcrumb.Item>主页</Breadcrumb.Item>
-                    <Breadcrumb.Item>订单查询</Breadcrumb.Item>
-                </Breadcrumb>
-                <div style={{ padding: 24, background: '#fff', minHeight: 360 , height: '100vh'}}>
+            <Content>
+                <div className="title-box">
+                    <Breadcrumb>
+                        <Breadcrumb.Item>主页</Breadcrumb.Item>
+                        <Breadcrumb.Item>订单查询</Breadcrumb.Item>
+                    </Breadcrumb>
+                    <h2>订单查询</h2>
+                    <p>展示全部订单信息，组合查询订单信息</p>
+                </div>
+                <div className="content-box">
                     <div>订单查询</div>
                 </div>
             </Content>

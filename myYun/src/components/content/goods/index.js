@@ -14,17 +14,17 @@ class Goods extends Component {
 
     render() {
         return (
-            <Content style={{ margin: '0 16px' }}>
-                <div style={{background: "#fff",width:'100%'}}>
-                    <Breadcrumb style={{ margin: '16px 0' }}>
+            <Content>
+                <div className="title-box">
+                    <Breadcrumb>
                         <Breadcrumb.Item>主页</Breadcrumb.Item>
                         <Breadcrumb.Item>商品信息管理</Breadcrumb.Item>
                     </Breadcrumb>
-                    <h2>用户列表</h2>
-                    <p>用户信息展示，可以进行修改用户个人信息，修改用户密码操作</p>
+                    <h2>商品列表</h2>
+                    <p>仓库商品信息展示，可以进行新增商品，编辑商品，商品入库，商品出库操作</p>
                 </div>
 
-                <div style={{ padding: 24, background: '#fff', minHeight: 360 , height: '100vh'}}>
+                <div className="content-box">
                     <div>Goods</div>
                 </div>
             </Content>

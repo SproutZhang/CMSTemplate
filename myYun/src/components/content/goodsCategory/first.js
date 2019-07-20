@@ -13,12 +13,16 @@ class First extends Component {
 
     render() {
         return (
-            <Content style={{ margin: '0 16px' }}>
-                <Breadcrumb style={{ margin: '16px 0' }}>
-                    <Breadcrumb.Item>主页</Breadcrumb.Item>
-                    <Breadcrumb.Item>商品一级分类</Breadcrumb.Item>
-                </Breadcrumb>
-                <div style={{ padding: 24, background: '#fff', minHeight: 360 , height: '100vh'}}>
+            <Content>
+                <div className="title-box">
+                    <Breadcrumb>
+                        <Breadcrumb.Item>主页</Breadcrumb.Item>
+                        <Breadcrumb.Item>商品一级分类</Breadcrumb.Item>
+                    </Breadcrumb>
+                    <h2>一级商品分类</h2>
+                    <p>一级商品分类展示，可以进行新增商品分类，修改商品分类，删除商品分类操作</p>
+                </div>
+                <div className="content-box">
                     <div>一级分类</div>
 
                 </div>

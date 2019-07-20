@@ -16,7 +16,7 @@ class Contents extends Component {
       };
     render() { 
         return ( 
-            <Content style={{ margin: '0 16px' }}>
+            <Content style={{borderTop: '1px solid #eee'}}>
                 <Breadcrumb style={{ margin: '16px 0' }}>
                 <Breadcrumb.Item>User</Breadcrumb.Item>
                 <Breadcrumb.Item>Bill</Breadcrumb.Item>

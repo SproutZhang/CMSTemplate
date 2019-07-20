@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+main{
+  border-top: 1px solid #eee;
+}
+main .title-box{
+  background: #fff;
+  width:100%;
+  padding:20px;
+}
+main .content-box{
+  padding: 20px;
+  minHeight: 360px;
+  height: 100vh
+}
+main .ant-breadcrumb{
+  padding: 0 0 16px 0;
+  background: #fff
+}
