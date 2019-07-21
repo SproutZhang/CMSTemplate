@@ -6,7 +6,7 @@ const sql = require('../../../data/index');
 router.get('/add',(req,res) =>{
     let { cname } = req.query;
     if(cname){
-        sql.goodsCategory.first.data.push({
+        sql.goodsCategory.first.data.unshift({
             id: Date.now(),
             cname
         })
