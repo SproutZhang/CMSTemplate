@@ -1,6 +1,7 @@
 import * as types from './actionTypes';
 import {post,get} from '../api/index';
-import { message } from 'antd'
+import { message } from 'antd';
+import apiUrl from '../api/urlConfig';
 
 
 //获取用户信息
@@ -21,10 +22,15 @@ function getGFirst(data){
 
 
 
-//给组件调用的
-export function login(url,params){
+/*
+* 用户
+* */
+const { loginUrl, cookieUrl, userUrl } = apiUrl.user;
+
+//登录
+export function login(params){
     return function(dispatch,getState){
-        post(url,params).then(d=>{
+        post(loginUrl,params).then(d=>{
             if(d.code === 0){
                 // document.cookie="username="+d.data.name;
                 dispatch({
@@ -40,9 +46,9 @@ export function login(url,params){
 }
 
 //获取cookie
-export function getCookie(url) {
+export function getCookie() {
     return function (dispatch,getState) {
-        get(url).then(d=>{
+        get(cookieUrl).then(d=>{
             if(d.code === 0){
                 dispatch({
                     type: types.LOGIN,
@@ -57,9 +63,9 @@ export function getCookie(url) {
 }
 
 //获取用户信息
-export function getUserInfo(url){
+export function getUserInfo(){
     return function(dispatch,getState){
-        get(url).then(d=>{
+        get(userUrl).then(d=>{
             if(d.code === 0){ 
                 dispatch(getUser(d.msg))
             }else{
@@ -70,10 +76,16 @@ export function getUserInfo(url){
     }
 }
 
+/*
+* 商品
+* */
+
+const { addUrl, getUrl } = apiUrl.goods.category.first;
+
 //获取一级商品分类
-export function getGoodsFirst(url) {
+export function getGoodsFirst() {
     return function (dispatch,getState) {
-        get(url).then(d=>{
+        get(getUrl).then(d=>{
             if(d.code === 0){
                 dispatch(getGFirst(d.msg))
             }else{
@@ -84,11 +96,14 @@ export function getGoodsFirst(url) {
     }
 }
 //添加
-export function addGoodsFirst(url) {
+export function addGoodsFirst() {
     return function (dispatch,getState) {
-        get(url).then(d=>{
+        get(getUrl).then(d=>{
             if(d.code === 0){
-                return d.msg
+                message.success(d.msg);
+                dispatch({
+                    type: types.ADD_GOODS_FIRST
+                })
             }else{
                 message.error(d.msg);
                 return false

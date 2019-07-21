@@ -12,12 +12,12 @@ class Login extends Component {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                this.props.login('/login',values)
+                this.props.login(values)
             }
         });
     };
     componentDidMount(){
-        this.props.getCookie('/get')
+        this.props.getCookie()
         let { isLogin, history } = this.props;
         if(isLogin){
             history.push('/')

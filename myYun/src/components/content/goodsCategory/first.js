@@ -3,7 +3,6 @@ import {Layout, Breadcrumb, Table, Button} from 'antd';
 import { connect } from "react-redux";
 import * as actions from '../../../store/actions';
 import { mapGoods } from "../../../store/setMapStateProps";
-import apiUrl from "../../../api/urlConfig";
 import AddGFirstModal from './addFirstModal';
 
 const { Content } = Layout;
@@ -16,8 +15,7 @@ class First extends Component {
         }
     }
     componentDidMount() {
-        let url = apiUrl.goods.category.first.get;
-        this.props.getGoodsFirst(url)
+        this.props.getGoodsFirst()
     }
     showModal = ()=>{
         this.setState({visible: true})

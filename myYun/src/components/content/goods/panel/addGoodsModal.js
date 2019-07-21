@@ -25,6 +25,14 @@ class AddGoodsModal extends Component {
         }
         return e && e.fileList;
     };
+    handleSubmit = e =>{
+        e.preventDefault();
+        this.props.form.validateFields((err, values) => {
+            if (!err) {
+                console.log('Received values of form: ', values);
+            }
+        });
+    }
 
     render() {
         const {visible,handleOk,handleCancel} = this.props;
@@ -35,7 +43,7 @@ class AddGoodsModal extends Component {
                 okText="保存"
                 cancelText="取消"
                 visible={visible}
-                onOk={handleOk}
+                onOk={this.handleSubmit}
                 onCancel={handleCancel}
             >
                 <Form>

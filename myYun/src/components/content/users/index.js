@@ -13,7 +13,7 @@ class User extends Component {
         this.state = {}
     }
     componentDidMount(){
-        this.props.getUserInfo('/getUsers')
+        this.props.getUserInfo()
 
     }
     render() { 

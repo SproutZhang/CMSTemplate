@@ -1,7 +1,9 @@
 const apiUrl = {
     //用户
     user: {
-        login: '/login'
+        loginUrl: '/login',
+        cookieUrl: '/get',
+        userUrl: '/getUsers'
     },
     //商品
     goods: {
@@ -9,8 +11,8 @@ const apiUrl = {
         category: {
             //一级分类
             first:{
-                add:'/GoodsCategory/first/add',
-                get: '/GoodsCategory/first/get'
+                addUrl:'/GoodsCategory/first/add',
+                getUrl: '/GoodsCategory/first/get'
             }
         }
     }

@@ -6,13 +6,12 @@ import {
     Form,
     Input,
 } from 'antd';
+import { addGoodsFirst } from '../../../store/actions';
 
 class AddGFirstModal extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            val: ''
-        }
+        this.state = {}
     }
     handleSubmit = e =>{
         e.preventDefault();
@@ -20,10 +19,14 @@ class AddGFirstModal extends Component {
             if (!err) {
                 console.log('Received values of form: ', values);
             }
+
+            addGoodsFirst()();
+            this.props.handleOk();
         });
+
     }
     render() {
-        const {visible,handleOk,handleCancel} = this.props;
+        const {visible,handleCancel} = this.props;
         const { getFieldDecorator } = this.props.form;
         return (
             <Modal
