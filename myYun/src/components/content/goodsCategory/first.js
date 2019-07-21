@@ -17,6 +17,7 @@ class First extends Component {
     componentDidMount() {
         this.props.getGoodsFirst()
     }
+
     showModal = ()=>{
         this.setState({visible: true})
     }

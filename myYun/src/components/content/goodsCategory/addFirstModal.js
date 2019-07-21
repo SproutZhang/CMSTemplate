@@ -6,7 +6,9 @@ import {
     Form,
     Input,
 } from 'antd';
-import { addGoodsFirst } from '../../../store/actions';
+import { connect } from 'react-redux';
+import * as actions from '../../../store/actions';
+import { mapGoods } from "../../../store/setMapStateProps";
 
 class AddGFirstModal extends Component {
     constructor(props) {
@@ -17,11 +19,10 @@ class AddGFirstModal extends Component {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                console.log('Received values of form: ', values);
+                let params = '?cname='+values.cname;
+                this.props.addGoodsFirst(params);
+                this.props.handleOk();
             }
-
-            addGoodsFirst()();
-            this.props.handleOk();
         });
 
     }
@@ -55,4 +56,4 @@ class AddGFirstModal extends Component {
 }
 const WrappedDynamicRule = Form.create({ name: 'dynamic_rule' })(AddGFirstModal);
 
-export default WrappedDynamicRule;
+export default connect(mapGoods,actions)(WrappedDynamicRule);

@@ -82,28 +82,29 @@ export function getUserInfo(){
 
 const { addUrl, getUrl } = apiUrl.goods.category.first;
 
-//获取一级商品分类
+//获取一级商品类别
+function getGCategory(dispatch) {
+    get(getUrl).then(d=>{
+        if(d.code === 0){
+            dispatch(getGFirst(d.msg))
+        }else{
+            message.error(d.msg);
+            return false
+        }
+    })
+}
 export function getGoodsFirst() {
     return function (dispatch,getState) {
-        get(getUrl).then(d=>{
-            if(d.code === 0){
-                dispatch(getGFirst(d.msg))
-            }else{
-                message.error(d.msg);
-                return false
-            }
-        })
+        getGCategory(dispatch)
     }
 }
-//添加
-export function addGoodsFirst() {
+//添加一级商品类别
+export function addGoodsFirst(params) {
     return function (dispatch,getState) {
-        get(getUrl).then(d=>{
+        get(addUrl+params).then(d=>{
             if(d.code === 0){
                 message.success(d.msg);
-                dispatch({
-                    type: types.ADD_GOODS_FIRST
-                })
+                getGCategory(dispatch)
             }else{
                 message.error(d.msg);
                 return false
