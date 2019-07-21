@@ -20,7 +20,6 @@ export default function reducer_user(state=initState, action){
             o.user.name = action.data.name;
             o.user.avatar = action.data.avatar;
             o.isLogin = true;
-           // console.log(o)
             return o
 
         case types.GET_USER_INFO:

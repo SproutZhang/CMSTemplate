@@ -2,10 +2,18 @@ import * as types from './actionTypes';
 import {post,get} from '../api/index';
 
 
-
-export function getUser(data){
+//获取用户信息
+function getUser(data){
     return{
         type: types.GET_USER_INFO,
+        data
+    }
+}
+
+//获取一级分类商品
+function getGFirst(data){
+    return{
+        type: types.GET_GOODS_FIRST,
         data
     }
 }
@@ -40,7 +48,8 @@ export function getCookie(url) {
                     data: d
                 })
             }else{
-                alert(d.msg)
+                // alert(d.msg)
+                console.log(d.msg);
                 return false
             }
         })
@@ -60,3 +69,33 @@ export function getUserInfo(url){
         })
     }
 }
+
+//获取一级商品分类
+export function getGoodsFirst(url) {
+    return function (dispatch,getState) {
+        get(url).then(d=>{
+            if(d.code === 0){
+                dispatch(getGFirst(d.msg))
+            }else{
+                alert(d.msg)
+                return false
+            }
+        })
+    }
+}
+//添加
+export function addGoodsFirst(url) {
+    return function (dispatch,getState) {
+        get(url).then(d=>{
+            if(d.code === 0){
+                return d.msg
+            }else{
+                alert(d.msg)
+                return false
+            }
+        })
+    }
+}
+
+
+

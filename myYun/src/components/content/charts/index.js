@@ -62,7 +62,7 @@ class Charts extends Component {
 
             })
         }
-        console.log(card);
+        // console.log(card);
 
         return (
             <Content style={{ margin: '0 16px' }}>

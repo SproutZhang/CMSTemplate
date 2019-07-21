@@ -1,18 +1,30 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import * as actions from '../../../store/actions';
-import { mapUser } from '../../../store/setMapStateProps'
 import { Layout, Breadcrumb} from 'antd';
+import AddGoods from './panel/add';
+import AddGoodsModal from './panel/addGoodsModal'
+import './index.css'
 const { Content } = Layout;
 
 
 class Goods extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            visible: false
+        }
+    }
+    showModal = ()=>{
+        this.setState({visible: true})
+    }
+    handleOk = ()=>{
+        this.setState({visible: false})
+    }
+    handleCancel  = ()=>{
+        this.setState({visible: false})
     }
 
     render() {
+        let { visible } = this.state;
         return (
             <Content>
                 <div className="title-box">
@@ -25,7 +37,14 @@ class Goods extends Component {
                 </div>
 
                 <div className="content-box">
-                    <div>Goods</div>
+                    <AddGoods
+                        showModal={ this.showModal }
+                    />
+                    <AddGoodsModal
+                        visible={visible}
+                        handleOk={this.handleOk}
+                        handleCancel={this.handleCancel}
+                    />
                 </div>
             </Content>
 
