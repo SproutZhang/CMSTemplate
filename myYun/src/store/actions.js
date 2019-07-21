@@ -1,5 +1,6 @@
 import * as types from './actionTypes';
 import {post,get} from '../api/index';
+import { message } from 'antd'
 
 
 //获取用户信息
@@ -31,7 +32,7 @@ export function login(url,params){
                     data: d.data
                 })
             }else{
-                alert(d.msg)
+                message.error(d.msg);
                 return false
             }
         })
@@ -48,8 +49,7 @@ export function getCookie(url) {
                     data: d
                 })
             }else{
-                // alert(d.msg)
-                console.log(d.msg);
+                message.error(d.msg);
                 return false
             }
         })
@@ -63,7 +63,7 @@ export function getUserInfo(url){
             if(d.code === 0){ 
                 dispatch(getUser(d.msg))
             }else{
-                alert(d.msg)
+                message.error(d.msg);
                 return false
             }
         })
@@ -77,7 +77,7 @@ export function getGoodsFirst(url) {
             if(d.code === 0){
                 dispatch(getGFirst(d.msg))
             }else{
-                alert(d.msg)
+                message.error(d.msg);
                 return false
             }
         })
@@ -90,7 +90,7 @@ export function addGoodsFirst(url) {
             if(d.code === 0){
                 return d.msg
             }else{
-                alert(d.msg)
+                message.error(d.msg);
                 return false
             }
         })
