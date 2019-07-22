@@ -22,3 +22,9 @@ code {
 .ant-layout-header{
   padding: 0 30px !important;
 }
+.mw230{
+  max-width: 230px;
+}
+.mw130{
+  max-width: 130px;
+}

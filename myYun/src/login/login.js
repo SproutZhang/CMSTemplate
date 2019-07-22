@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './login.css';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
-import * as actions from '../store/actions';
+import * as actions from '../store/actions/user/index';
 import { connect } from 'react-redux';
 import { mapUser } from '../store/setMapStateProps';
 import Logo from '../assets/images/logo.svg';

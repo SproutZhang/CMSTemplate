@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Layout, Icon, Dropdown, Menu } from 'antd';
 import './header.css';
 import { connect } from 'react-redux';
-import * as actions from '../../store/actions'
+import * as actions from '../../store/actions/user/index'
 import { mapUser } from '../../store/setMapStateProps'
 const { Header } = Layout;
 

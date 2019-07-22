@@ -68,9 +68,10 @@ class AddGoodsModal extends Component {
                         )}
                     </Form.Item>
                     <Form.Item label="图片">
-                        {getFieldDecorator('图片', {
+                        {getFieldDecorator('goodsImg', {
                             valuePropName: 'fileList',
                             getValueFromEvent: this.normFile,
+                            rules: [{ required: true, message: '请上传图片!' }],
                         })(
                             <Upload name="logo" action="/upload.do" listType="picture">
                                 <Button>

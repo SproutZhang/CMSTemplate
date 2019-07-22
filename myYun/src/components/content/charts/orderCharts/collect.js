@@ -8,10 +8,6 @@ class CollectCharts extends Component {
         this.state = {}
     }
     getOption = () => {
-        const {
-            collection,
-            success
-        } = this.props
 
         return {
             title : {

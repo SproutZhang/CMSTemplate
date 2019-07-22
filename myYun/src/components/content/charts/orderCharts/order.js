@@ -8,12 +8,6 @@ class OrderCharts extends Component {
         this.state = {}
     }
     getOption = () => {
-        const {
-            wait,
-            success,
-            refunding,
-            dispatching
-        } = this.props
 
         return {
             title : {

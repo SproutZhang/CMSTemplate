@@ -7,7 +7,7 @@ import menuRouter from './menuRouter/menuRouter';
 
 
 
-class App extends React.Component {
+class App extends Component {
 
   render() {
     return (
