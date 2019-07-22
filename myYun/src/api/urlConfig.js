@@ -19,6 +19,11 @@ const apiUrl = {
                 sGetUrl:'/GoodsCategory/second/get'
             }
         }
+    },
+    orders: {
+        allOrders: '/order/all',
+        deliveryOrders: '/order/delivery',
+        refundOrders: '/order/refund'
     }
 
 }

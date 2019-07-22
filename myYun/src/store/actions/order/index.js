@@ -2,3 +2,65 @@ import * as types from '../../actionTypes';
 import {post,get} from '../../../api/index';
 import { message } from 'antd';
 import apiUrl from '../../../api/urlConfig';
+
+const { allOrders, deliveryOrders, refundOrders} = apiUrl.orders;
+
+function getAll(data){
+    return{
+        type: types.GET_ALL_ORDER,
+        data
+    }
+}
+function getDelivery(data){
+    return{
+        type: types.GET_DELIVERY_ORDER,
+        data
+    }
+}
+function getRefund(data) {
+    return{
+        type: types.GET_REFUND_ORDER,
+        data
+    }
+}
+//获取全部订单
+export function getAllOrders() {
+    return function (dispatch,getState) {
+        get(allOrders).then(d=>{
+            if(d.code === 0){
+                dispatch(getAll(d.msg))
+            }else{
+                message.error(d.msg);
+                return false
+            }
+        })
+    }
+}
+//获取发货订单
+export function getDeliveryOrders(params) {
+    return function (dispatch,getState) {
+        get(deliveryOrders + params).then(d => {
+            if (d.code === 0) {
+                dispatch(getDelivery(d.msg))
+            } else {
+                message.error(d.msg);
+                return false
+            }
+        })
+    }
+}
+//获取退款订单
+export function getRefundOrders() {
+    return function (dispatch,getState) {
+        get(refundOrders).then(d=>{
+            if(d.code === 0){
+                dispatch(getRefund(d.msg))
+            }else{
+                message.error(d.msg);
+                return false
+            }
+        })
+    }
+}
+
+
