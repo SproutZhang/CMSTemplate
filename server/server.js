@@ -1,11 +1,15 @@
 const express = require('express');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 const app = express();
-const cookieParser = require('cookie-parser')
+const cookieParser = require('cookie-parser');
+const multer = require('multer');
 
-app.use(express.static('./img'))
+
+app.use(express.static('./img'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(multer({dest: './pic'}).array('image'));
+
 
 /*
 * 用户操作
@@ -29,6 +33,8 @@ app.use('/getUsers',require('./router/user/user_info'));
 * */
 //一级商品分类
 app.use('/GoodsCategory/first',require('./router/goods/category/first'));
+//二级商品分类
+app.use('/GoodsCategory/second',require('./router/goods/category/second'));
 
 
 
@@ -36,5 +42,12 @@ app.use('/GoodsCategory/first',require('./router/goods/category/first'));
 * 订单操作
 *
 * */
+
+
+/*
+* 上传
+* */
+
+app.use('/upload',require('./router/tools/upload'))
 
 app.listen(80)

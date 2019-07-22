@@ -13,22 +13,18 @@ const sql = {
             {
                 title: '姓名',
                 dataIndex: 'name',
-                key: 'name',
             },
             {
                 title: '年龄',
                 dataIndex: 'age',
-                key: 'age',
             },
             {
                 title: '住址',
                 dataIndex: 'address',
-                key: 'address',
             },
             {
                 title: '电话',
                 dataIndex: 'tel',
-                key: 'tel',
             }
         ],
         data:[
@@ -71,19 +67,35 @@ const sql = {
                 {
                     title: 'id',
                     dataIndex: 'id',
-                    key: 'id',
                 },
                 {
                     title: '分类名称',
                     dataIndex: 'cname',
-                    key: 'cname',
                 }
             ],
             data:[]
         },
-        Second:[
-
-        ]
+        second:{
+            columns:[
+                {
+                    title: 'id',
+                    dataIndex: 'id',
+                },
+                {
+                    title: '所属一级名称',
+                    dataIndex: 'pname',
+                },
+                {
+                    title: '分类名称',
+                    dataIndex: 'cname',
+                },
+                {
+                    title: '图片',
+                    dataIndex: 'imgUrl',
+                }
+            ],
+            data:[]
+        }
     }
 
 
