@@ -42,7 +42,7 @@ app.use('/GoodsCategory/second',require('./router/goods/category/second'));
 * 订单操作
 *
 * */
-
+app.use('/order',require('./router/order/index'))
 
 /*
 * 上传
