@@ -7,7 +7,7 @@ import {
     Input,
 } from 'antd';
 import { connect } from 'react-redux';
-import * as actions from '../../../store/actions';
+import * as actions from '../../../store/actions/goods/first';
 import { mapGoods } from "../../../store/setMapStateProps";
 
 class AddGFirstModal extends Component {

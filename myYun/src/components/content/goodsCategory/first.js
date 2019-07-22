@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import {Layout, Breadcrumb, Table, Button} from 'antd';
 import { connect } from "react-redux";
-import * as actions from '../../../store/actions';
+import * as actions from '../../../store/actions/goods/first';
 import { mapGoods } from "../../../store/setMapStateProps";
 import AddGFirstModal from './addFirstModal';
 
 const { Content } = Layout;
+const { Column } = Table;
 
 class First extends Component {
     constructor(props) {
@@ -29,11 +30,16 @@ class First extends Component {
     }
     render() {
         const { goodsFirst } = this.props;
-        let columns1 = goodsFirst.columns;
         let { visible } = this.state;
-        // if(columns1){
-        //     columns1 = goodsFirst.columns;
-        // }
+        let columns = goodsFirst.columns;
+        let ColumnList = null;
+        if(columns){
+            ColumnList = columns.map((item,i)=>{
+                return (
+                    <Column title={item.title} dataIndex={item.dataIndex} key={item.dataIndex} />
+                )
+            })
+        }
         return (
             <Content>
                 <div className="title-box">
@@ -60,8 +66,20 @@ class First extends Component {
                     <Table
                         bordered
                         style={{background:"#fff"}}
-                        columns={columns1}
-                        dataSource={goodsFirst.data} />
+                        dataSource={goodsFirst.data} >
+
+                        {ColumnList}
+                        <Column
+                            title="操作"
+                            key="action"
+                            render={text => (
+                                <span>
+                                    <Button type="primary">修改</Button> &nbsp;&nbsp;
+                                    <Button type="danger">删除</Button>
+                                </span>
+                            )}
+                        />
+                    </Table>
 
                 </div>
             </Content>
