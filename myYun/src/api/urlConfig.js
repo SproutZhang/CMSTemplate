@@ -12,7 +12,9 @@ const apiUrl = {
             //一级分类
             first:{
                 fAddUrl:'/GoodsCategory/first/add',
-                fGetUrl: '/GoodsCategory/first/get'
+                fGetUrl: '/GoodsCategory/first/get',
+                fEditUrl: '/GoodsCategory/first/edit',
+                fDelUrl: '/GoodsCategory/first/del',
             },
             second: {
                 sAddUrl: '/GoodsCategory/second/add',
