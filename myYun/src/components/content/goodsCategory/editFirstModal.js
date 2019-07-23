@@ -20,26 +20,20 @@ class EditGFirstModal extends Component {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                const {id } = this.props;
+                const {id } = this.props.curFirstData[0];
                 let params = '?id='+id+'&cname='+values.cname;
                 this.props.editGoodsFirst(params)
                 this.props.handleOk();
             }
         });
-
     }
     render() {
-        const {visible,id,handleCancel,goodsFirst } = this.props;
+        const {visible,handleCancel,curFirstData} = this.props;
         const { getFieldDecorator } = this.props.form;
 
-        let data = goodsFirst.data;
         let defaultName = '';
-        if(data){
-            //通过id获取name
-            let fdata = data.filter(item=> item.id == id)
-            if(fdata.length>0){
-                defaultName = fdata[0].cname;
-            }
+        if(curFirstData.length>0){
+            defaultName = curFirstData[0].cname;
         }
 
         return (

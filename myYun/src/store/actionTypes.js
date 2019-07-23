@@ -6,11 +6,16 @@ export const GET_USER_INFO = 'GET_USER_INFO';
 export const ADD_GOODS_FIRST = 'ADD_GOODS_FIRST';
 //获取一级商品分类
 export const GET_GOODS_FIRST = 'GET_GOODS_FIRST';
+//当前一级商品信息
+export const CUR_GOODS_FIRST = 'CUR_GOODS_FIRST';
 
-//添加一级商品分类
+
+//添加二级商品分类
 export const ADD_GOODS_SECOND = 'ADD_GOODS_SECOND';
-//获取一级商品分类
+//获取二级商品分类
 export const GET_GOODS_SECOND = 'GET_GOODS_SECOND';
+//当前二级商品信息
+export const CUR_GOODS_SECOND = 'CUR_GOODS_SECOND';
 
 // 获取全部订单
 export const GET_ALL_ORDER = 'GET_ALL_ORDER';

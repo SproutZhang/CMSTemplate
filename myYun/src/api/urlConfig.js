@@ -18,7 +18,9 @@ const apiUrl = {
             },
             second: {
                 sAddUrl: '/GoodsCategory/second/add',
-                sGetUrl:'/GoodsCategory/second/get'
+                sGetUrl:'/GoodsCategory/second/get',
+                sEditUrl:'/GoodsCategory/second/edit',
+                sDelUrl:'/GoodsCategory/second/del'
             }
         }
     },

@@ -31,10 +31,13 @@ export function getGoodsFirst() {
 }
 //通过id获取一级商品名称
 export function getGFirstCname(params) {
-    return function(){
+    return function(dispatch,getState){
         get(fGetUrl+params).then(d=>{
             if(d.code === 0){
-                return d.data
+                dispatch({
+                    type: types.CUR_GOODS_FIRST,
+                    data: d.data
+                })
             }else{
                 message.error(d.msg);
                 return false

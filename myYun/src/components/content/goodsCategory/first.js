@@ -15,7 +15,6 @@ class First extends Component {
         this.state = {
             visible: false,
             visible1: false,
-            id:''
         }
     }
     componentDidMount() {
@@ -29,7 +28,8 @@ class First extends Component {
     }
     //显示编辑弹框
     showModal1 = (id)=>{
-        this.setState({visible1: true,id})
+        this.setState({visible1: true})
+        this.props.getGFirstCname('?id='+id);
     }
     handleOk = ()=>{
         this.setState({visible: false})
@@ -49,7 +49,7 @@ class First extends Component {
     }
     render() {
         const { goodsFirst } = this.props;
-        let { visible, visible1, id } = this.state;
+        let { visible, visible1 } = this.state;
         let columns = goodsFirst.columns;
         let ColumnList = null;
         if(columns){
@@ -84,7 +84,6 @@ class First extends Component {
                     />
                     <EditGFirstModal
                         visible={visible1}
-                        id={id}
                         handleOk={this.handleOk1}
                         handleCancel={this.handleCancel1}
                     />

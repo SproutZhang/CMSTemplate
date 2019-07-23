@@ -6,9 +6,11 @@ import {
     Layout,
     Breadcrumb,
     Button,
-    Table
+    Table,
+    Popconfirm
 } from 'antd';
 import AddGSecondModal from "./addSecondModal";
+import EditGSecondModal from "./editSecondModal";
 const { Content } = Layout;
 const { Column } = Table;
 
@@ -16,7 +18,8 @@ class Second extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            visible: false
+            visible: false,
+            visible1: false,
         }
     }
     componentDidMount() {
@@ -26,15 +29,29 @@ class Second extends Component {
     showModal = ()=>{
         this.setState({visible: true})
     }
+    showModal1 = (id)=>{
+        this.setState({visible1: true})
+        this.props.getGSecondInfo('?id='+id);
+    }
     handleOk = ()=>{
         this.setState({visible: false})
+    }
+    handleOk1 = ()=>{
+        this.setState({visible1: false})
     }
     handleCancel  = ()=>{
         this.setState({visible: false})
     }
+    handleCancel1  = ()=>{
+        this.setState({visible1: false})
+    }
+    //删除
+    confirm = (id)=>{
+        this.props.delGoodsSecond('?id='+id)
+    }
 
     render() {
-        let { visible } = this.state;
+        let { visible, visible1 } = this.state;
         const { goodsSecond } = this.props;
         let columns = goodsSecond.columns;
         let ColumnList = null;
@@ -70,6 +87,11 @@ class Second extends Component {
                         handleOk={this.handleOk}
                         handleCancel={this.handleCancel}
                     />
+                    <EditGSecondModal
+                        visible={visible1}
+                        handleOk={this.handleOk1}
+                        handleCancel={this.handleCancel1}
+                    />
                     <Table
                         bordered
                         style={{background:"#fff"}}
@@ -88,8 +110,19 @@ class Second extends Component {
                             key="action"
                             render={text => (
                                 <span>
-                                    <Button type="primary">修改</Button> &nbsp;&nbsp;
+                                    <Button
+                                        type="primary"
+                                        onClick={ this.showModal1.bind(this,text.id) }
+                                    >修改</Button>
+                                    &nbsp;&nbsp;
+                                    <Popconfirm
+                                        title="删除后数据不可恢复，确认删除吗?"
+                                        onConfirm={this.confirm.bind(this,text.id)}
+                                        okText="确认"
+                                        cancelText="取消"
+                                    >
                                     <Button type="danger">删除</Button>
+                                  </Popconfirm>
                                 </span>
                             )}
                         />
