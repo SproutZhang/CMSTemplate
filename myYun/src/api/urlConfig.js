@@ -23,7 +23,10 @@ const apiUrl = {
     orders: {
         allOrders: '/order/all',
         deliveryOrders: '/order/delivery',
-        refundOrders: '/order/refund'
+        sendOrder: '/order/delivery/send',
+        refundOrders: '/order/refund',
+        agreeOrder: '/order/refund/agree',
+        refuseOrder: '/order/refund/refuse'
     }
 
 }

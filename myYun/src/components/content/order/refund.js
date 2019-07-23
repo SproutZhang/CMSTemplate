@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { mapOrders } from '../../../store/setMapStateProps';
 import * as actions from '../../../store/actions/order/index';
+import setStatus from '../../tools/index';
 import {Layout, Breadcrumb, Table, Button} from 'antd';
 const { Content } = Layout;
 const { Column } = Table;
@@ -14,15 +15,44 @@ class Refund extends Component {
     componentDidMount() {
         this.props.getRefundOrders()
     }
+    agree = (id)=>{
+        this.props.agreeOrders('?id='+id)
+    }
+    refuse = (id)=>{
+        this.props.refuseOrders('?id='+id)
+    }
 
     render() {
         const { refundOrders } = this.props;
         let columns = refundOrders.columns;
         let ColumnList = null;
+        let columnslist = [];
         if(columns){
-            ColumnList = columns.map((item,i)=>{
+            columns.forEach((item,i)=>{
+                if(item.dataIndex === 'status'){
+                    columnslist.push(
+                        <Column
+                            title={item.title}
+                            dataIndex={item.dataIndex}
+                            key={item.dataIndex}
+                            render={text => {
+                                return setStatus(text);
+                            }}
+                        />
+                    )
+                }else{
+                    columnslist.push(
+                        <Column
+                            title={item.title}
+                            dataIndex={item.dataIndex}
+                            key={item.dataIndex}
+                        />
+                    )
+                }
+            })
+            ColumnList = columnslist.map((item,i)=>{
                 return (
-                    <Column title={item.title} dataIndex={item.dataIndex} key={item.dataIndex} />
+                    item
                 )
             })
         }
@@ -46,12 +76,19 @@ class Refund extends Component {
                         <Column
                             title="操作"
                             key="action"
-                            render={text => (
+                            render={(text,record) =>{
+                                return (
                                 <span>
-                                    <Button type="primary">同意</Button> &nbsp;&nbsp;
-                                    <Button type="danger">拒绝</Button>
+                                    <Button
+                                        type="primary"
+                                        onClick={this.agree.bind(this,text.id)}>同意</Button>
+                                    &nbsp;&nbsp;
+                                    <Button
+                                        type="danger"
+                                        onClick={this.refuse.bind(this,text.id)}>拒绝</Button>
                                 </span>
                             )}
+                            }
                         />
                     </Table>
 

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { mapOrders } from '../../../store/setMapStateProps';
 import * as actions from '../../../store/actions/order/index';
 import {Layout, Breadcrumb, Table} from 'antd';
+import setStatus from '../../tools/index'
 const { Content } = Layout;
 const { Column } = Table;
 
@@ -20,10 +21,33 @@ class Query extends Component {
         const { allOrders } = this.props;
         let columns = allOrders.columns;
         let ColumnList = null;
+        let columnslist = [];
         if(columns){
-            ColumnList = columns.map((item,i)=>{
+            columns.forEach((item,i)=>{
+                if(item.dataIndex === 'status'){
+                    columnslist.push(
+                        <Column
+                            title={item.title}
+                            dataIndex={item.dataIndex}
+                            key={item.dataIndex}
+                            render={text => {
+                                return setStatus(text);
+                            }}
+                        />
+                    )
+                }else{
+                    columnslist.push(
+                        <Column
+                                title={item.title}
+                                dataIndex={item.dataIndex}
+                                key={item.dataIndex}
+                            />
+                    )
+                }
+            })
+            ColumnList = columnslist.map((item,i)=>{
                 return (
-                    <Column title={item.title} dataIndex={item.dataIndex} key={item.dataIndex} />
+                    item
                 )
             })
         }
