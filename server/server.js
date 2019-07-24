@@ -24,13 +24,15 @@ app.use('/login',require('./router/user/user_login'));
 app.use('/get',require('./router/user/getCookie'));
 
 //获取用户信息
-app.use('/getUsers',require('./router/user/user_info'));
+app.use('/users',require('./router/user/user_info'));
 
 
 /*
 * 商品操作
 *
 * */
+//商品信息
+app.use('/goods',require('./router/goods/index'));
 //一级商品分类
 app.use('/GoodsCategory/first',require('./router/goods/category/first'));
 //二级商品分类
