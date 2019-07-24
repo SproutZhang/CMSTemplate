@@ -1,7 +1,7 @@
 /* 添加商品 */
 
 import React, { Component } from 'react';
-import { Button } from 'antd';
+import { Button, Col } from 'antd';
 
 
 
@@ -14,11 +14,14 @@ class AddGoods extends Component {
     render() {
         const { showModal } = this.props;
         return (
-            <Button
-                type="dashed"
-                className="add-goods"
-                onClick={showModal}
-            >+ 添加商品</Button>
+            <Col span={8}>
+                <Button
+                    type="dashed"
+                    className="add-goods"
+                    onClick={showModal}
+                >+ 添加商品</Button>
+            </Col>
+
         );
     }
 }

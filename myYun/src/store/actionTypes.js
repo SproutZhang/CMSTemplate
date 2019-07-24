@@ -2,6 +2,13 @@
 export const LOGIN = 'LOGIN';
 //获取用户信息
 export const GET_USER_INFO = 'GET_USER_INFO';
+export const CUR_USER_INFO = 'CUR_USER_INFO';
+
+//获取商品
+export const GET_GOODS = 'GET_GOODS';
+//当前商品
+export const CUR_GOODS = 'CUR_GOODS';
+
 //添加一级商品分类
 export const ADD_GOODS_FIRST = 'ADD_GOODS_FIRST';
 //获取一级商品分类

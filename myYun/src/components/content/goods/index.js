@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
-import { Layout, Breadcrumb} from 'antd';
+import { Layout, Breadcrumb,Row} from 'antd';
 import AddGoods from './panel/add';
-import AddGoodsModal from './panel/addGoodsModal'
+import AddGoodsModal from './panel/addGoodsModal';
+import EditGoodsModal from './panel/editGoodsModal';
+import GoodsCard from './panel/goodsInfo';
+import { connect } from "react-redux";
+import * as actions from '../../../store/actions/goods/index';
+import { mapGoods } from "../../../store/setMapStateProps";
 import './index.css'
 const { Content } = Layout;
 
@@ -10,8 +15,18 @@ class Goods extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            visible: false
+            visible: false,
+            visible1: false
         }
+    }
+    componentDidMount() {
+        this.props.getGoodsAll()
+    }
+    //显示编辑弹框
+    showModal1 = (id)=>{
+        console.log(id);
+        this.setState({visible1: true})
+        this.props.getGoodsInfo('?id='+id);
     }
     showModal = ()=>{
         this.setState({visible: true})
@@ -19,12 +34,31 @@ class Goods extends Component {
     handleOk = ()=>{
         this.setState({visible: false})
     }
+    handleOk1 = ()=>{
+        this.setState({visible1: false})
+    }
     handleCancel  = ()=>{
         this.setState({visible: false})
     }
+    handleCancel1  = ()=>{
+        this.setState({visible1: false})
+    }
 
     render() {
-        let { visible } = this.state;
+        let { visible, visible1 } = this.state;
+        const {goodsInfo} = this.props;
+        let gcCard = null;
+        if(goodsInfo.length>0){
+            gcCard = goodsInfo.map(item=>{
+                return (
+                    <GoodsCard
+                        showModal={this.showModal1}
+                        key={item.id}
+                        data={item}
+                    />
+                )
+            })
+        }
         return (
             <Content>
                 <div className="title-box">
@@ -37,13 +71,23 @@ class Goods extends Component {
                 </div>
 
                 <div className="content-box">
-                    <AddGoods
-                        showModal={ this.showModal }
-                    />
+                    <Row gutter={16}>
+                        <AddGoods
+                            showModal={ this.showModal }
+                        />
+                        { gcCard }
+                        {/*<GoodsCard />*/}
+                    </Row>
+
                     <AddGoodsModal
                         visible={visible}
                         handleOk={this.handleOk}
                         handleCancel={this.handleCancel}
+                    />
+                    <EditGoodsModal
+                        visible={visible1}
+                        handleOk={this.handleOk1}
+                        handleCancel={this.handleCancel1}
                     />
                 </div>
             </Content>
@@ -52,5 +96,5 @@ class Goods extends Component {
     }
 }
 
-export default Goods;
+export default connect(mapGoods,actions)(Goods);
 

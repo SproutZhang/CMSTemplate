@@ -3,10 +3,16 @@ const apiUrl = {
     user: {
         loginUrl: '/login',
         cookieUrl: '/get',
-        userUrl: '/getUsers'
+        userUrl: '/users/get',
+        userEdit: '/users/edit',
+        userDel: '/users/del',
     },
     //商品
     goods: {
+        getGoodsUrl:'/goods/get',
+        addGoodsUrl:'/goods/add',
+        editGoodsUrl:'/goods/edit',
+        delGoodsUrl:'/goods/del',
         //分类
         category: {
             //一级分类

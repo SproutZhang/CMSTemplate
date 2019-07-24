@@ -16,7 +16,7 @@ function getUser(data){
 /*
 * 用户
 * */
-const { loginUrl, cookieUrl, userUrl } = apiUrl.user;
+const { loginUrl, cookieUrl, userUrl, userEdit, userDel } = apiUrl.user;
 
 //登录
 export function login(params){
@@ -54,11 +54,58 @@ export function getCookie() {
 }
 
 //获取用户信息
+function getMyUsers(dispatch) {
+    get(userUrl).then(d=>{
+        if(d.code === 0){
+            dispatch(getUser(d.msg))
+        }else{
+            message.error(d.msg);
+            return false
+        }
+    })
+}
 export function getUserInfo(){
     return function(dispatch,getState){
-        get(userUrl).then(d=>{
+        getMyUsers(dispatch)
+    }
+}
+//通过id获取用户信息
+export function getThisUser(params){
+    return function(dispatch,getState){
+        get(userUrl+params).then(d=>{
             if(d.code === 0){
-                dispatch(getUser(d.msg))
+                dispatch({
+                    type: types.CUR_USER_INFO,
+                    data: d.data
+                })
+            }else{
+                message.error(d.msg);
+                return false
+            }
+        })
+    }
+}
+//修改一级商品类别
+export function editUser(params) {
+    return function (dispatch,getState) {
+        get(userEdit+params).then(d=>{
+            if(d.code === 0){
+                message.success(d.msg);
+                getMyUsers(dispatch)
+            }else{
+                message.error(d.msg);
+                return false
+            }
+        })
+    }
+}
+//删除用户
+export function delUser(params) {
+    return function (dispatch,getState) {
+        get(userDel+params).then(d=>{
+            if(d.code === 0){
+                message.success(d.msg);
+                getMyUsers(dispatch)
             }else{
                 message.error(d.msg);
                 return false

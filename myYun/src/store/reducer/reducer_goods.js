@@ -3,7 +3,8 @@ import * as types from '../actionTypes';
 
 
 let initState={
-    goodsInfo:{},
+    goodsInfo:[],
+    curGoods:[],
     goodsFirst:{},
     curFirstData: [],
     goodsSecond:{},
@@ -13,10 +14,17 @@ let initState={
 export default function reducer_goods(state=initState, action){
     let o = JSON.parse(JSON.stringify(state))
     switch(action.type){
+        case types.GET_GOODS:
+            o.goodsInfo = action.data;
+            return o;
+
+        case types.CUR_GOODS:
+            o.curGoods = action.data;
+            return o;
+
         case types.GET_GOODS_FIRST:
             o.goodsFirst = action.data;
             return o;
-
         case types.GET_GOODS_SECOND:
             o.goodsSecond = action.data;
             return o;

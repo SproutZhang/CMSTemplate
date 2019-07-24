@@ -10,7 +10,8 @@ let initState={
         avatar:avatar,
     },
     isLogin: name?true:false,
-    userData:{}
+    userData:{},
+    curUserData:[]
 }
 
 export default function reducer_user(state=initState, action){
@@ -24,6 +25,10 @@ export default function reducer_user(state=initState, action){
 
         case types.GET_USER_INFO:
             o.userData = action.data;
+            return o
+
+        case types.CUR_USER_INFO:
+            o.curUserData = action.data;
             return o
 
         default:
